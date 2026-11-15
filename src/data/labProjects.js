@@ -14,6 +14,7 @@
  */
 
 import cosmicVoyageCover from '../assets/images/projects/cosmic-voyage.jpg'
+import maisonCover from '../assets/images/projects/maison.jpg'
 
 export const LAB_CATEGORIES = ['Frontend', '3D Experiences', 'Full Stack', 'AI & SaaS', 'Creative Websites']
 
@@ -62,18 +63,31 @@ export const labProjects = [
     title: 'Maison: Luxury E-Commerce',
     tagline: 'Editorial fashion storefront',
     description:
-      'A premium fashion and lifestyle shopping experience: editorial homepage, product galleries and detail pages, filters, search, cart, wishlist and a checkout demo.',
-    overview: ['A high-end storefront focused on editorial design, smooth micro-interactions and fully working shopping flows.'],
+      'An editorial luxury storefront for a fictional fashion house: 45 pieces with URL-synced filters, sorting and search, product galleries, a persistent cart and wishlist, and a multi-step checkout demo.',
+    overview: [
+      'MAISON is a high-end shopping experience built around editorial design and smooth micro-interactions. The homepage pairs a parallax hero and masked headline reveal with a lookbook, category grid and a scrolling new-arrivals rail.',
+      'Every shopping flow works end to end: filters and sorting live in the URL so views are shareable, search updates as you type, the cart and wishlist persist between visits, and a four-step checkout validates Indian addresses before showing a confirmation. The checkout is clearly labelled as a demo and collects no payment details.',
+    ],
     category: 'Frontend',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'React Router'],
     icon: 'ShoppingBag',
     accent: ['#d4b483', '#8b5cf6'],
-    cover: null,
+    cover: maisonCover,
     screenshots: [],
-    links: { github: null, live: null },
-    status: 'in-development',
-    features: ['Editorial homepage', 'Product galleries and detail pages', 'Filters, sorting and search', 'Cart, wishlist and checkout demo'],
-    challenges: [],
+    links: { github: 'https://github.com/laxmik0799/maison-luxe', live: 'https://maison-luxe-pink.vercel.app/' },
+    status: 'live', // deployment verified 15 Nov 2026
+    features: [
+      'Editorial homepage with parallax, reveals and a lookbook',
+      'Filters, five sort orders and live search, all synced to the URL',
+      'Product galleries with hover zoom, swipe and a lightbox',
+      'Persistent cart drawer, bag page and wishlist',
+      'Four-step responsive checkout demo with validation',
+      'Accessible dialogs, reduced-motion support and code splitting',
+    ],
+    challenges: [
+      'Keeping filter state in the URL so it survives refresh, back and sharing without extra re-renders',
+      'Layering drawers and lightboxes above a sticky header when page transitions create new stacking contexts (solved with portals)',
+    ],
     featured: false,
   },
   {
