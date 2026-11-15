@@ -71,7 +71,7 @@ export const site = {
 
   // ── SEO (injected into index.html at build time) ────────────
   seo: {
-    url: 'https://your-portfolio.vercel.app', // TODO: your deployed URL
+    url: 'https://laxmi-portfolio-beryl.vercel.app',
     title: 'Laxmi Kumari — Software Developer & Full-Stack Engineer',
     description:
       'Portfolio of Laxmi Kumari, IIT (BHU) graduate and Development Engineer at Standard Chartered. Backend engineering, full-stack development and AI-powered applications.',
