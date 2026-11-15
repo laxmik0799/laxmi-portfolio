@@ -15,6 +15,7 @@
 
 import cosmicVoyageCover from '../assets/images/projects/cosmic-voyage.jpg'
 import maisonCover from '../assets/images/projects/maison.jpg'
+import novaCover from '../assets/images/projects/nova.jpg'
 
 export const LAB_CATEGORIES = ['Frontend', '3D Experiences', 'Full Stack', 'AI & SaaS', 'Creative Websites']
 
@@ -92,21 +93,34 @@ export const labProjects = [
   },
   {
     id: 'ai-saas-dashboard',
-    title: 'AI SaaS Dashboard',
-    tagline: 'Analytics with an AI assistant',
+    title: 'Nova: AI SaaS Dashboard',
+    tagline: 'Analytics console for an LLM API platform',
     description:
-      'A premium AI product dashboard with interactive charts, analytics, filters, dark/light mode and an assistant interface using clearly labelled demo responses.',
-    overview: ['A responsive analytics dashboard for an AI product, built around clear data visualisation and fast navigation.'],
+      'An analytics console for a fictional LLM API platform: interactive charts, usage filters, request logs with live tail, API keys, billing in INR and a demo assistant that answers from the dashboard data.',
+    overview: [
+      'Nova Console shows how an organisation uses an AI API: traffic, tokens, spend, latency and errors across five models and five projects, from 24 hours to 90 days. Seeded sample data tells a small story (growth, a product launch and a resolved incident) that the charts and notifications surface.',
+      'Every control works: filters live in the URL, usage exports as CSV, logs stream in live, API keys are created and revoked with validation, and budgets drive real alerts. Nova Copilot is a clearly labelled demo assistant that matches about ten question types and computes its answers, charts and savings estimates from the same data as the dashboard.',
+    ],
     category: 'AI & SaaS',
-    tech: ['React', 'TypeScript', 'Recharts', 'Tailwind CSS', 'Framer Motion'],
+    tech: ['React', 'TypeScript', 'Recharts', 'Tailwind CSS', 'Framer Motion', 'Zustand'],
     icon: 'LayoutDashboard',
     accent: ['#4f7cff', '#22d3ee'],
-    cover: null,
+    cover: novaCover,
     screenshots: [],
-    links: { github: null, live: null },
-    status: 'in-development',
-    features: ['Interactive charts and KPIs', 'Sidebar navigation, search and filters', 'Dark / light mode', 'Demo AI assistant'],
-    challenges: [],
+    links: { github: 'https://github.com/laxmik0799/nova-ai-dashboard', live: 'https://nova-ai-dashboard-ochre.vercel.app/' },
+    status: 'live', // deployment verified 15 Nov 2026
+    features: [
+      'KPI cards, stacked traffic, spend donut and latency charts',
+      'Usage filters synced to the URL, heatmap and CSV export',
+      'Request logs with search, pagination, detail drawer and live tail',
+      'API key management and budget alerts, persisted locally',
+      'Demo AI assistant with streamed, data-backed answers',
+      'Command palette, dark / light / system theme, responsive layout',
+    ],
+    challenges: [
+      'Generating deterministic, realistic sample data anchored to today so every chart, alert and assistant answer agrees',
+      'Making Recharts follow the theme by reading CSS variables, and fixing an invisible overlay left behind by a shared layout animation',
+    ],
     featured: false,
   },
   {
