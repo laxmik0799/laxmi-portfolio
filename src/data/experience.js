@@ -19,8 +19,13 @@ export const experience = [
     location: null,
     period: null,
     status: 'Current',
-    summary: 'Building software as a Development Engineer at Standard Chartered.',
-    points: [], // TODO: add responsibilities in your own words
+    summary: 'Software development across banking applications, backend and frontend integration, and data automation.',
+    // Kept deliberately high-level: no confidential or internal details.
+    points: [
+      'Develop features for banking applications across the stack, with React front ends and Java Spring Boot services.',
+      'Integrate front ends with backend REST APIs and relational data layers.',
+      'Build Python automation for data mapping, validation and reporting.',
+    ],
     tags: ['Java', 'Spring Boot', 'React.js', 'Python'],
   },
   {
@@ -31,7 +36,7 @@ export const experience = [
     location: 'Varanasi, India',
     period: null,
     status: 'Graduate',
-    summary: 'Indian Institute of Technology (BHU), Varanasi.',
+    summary: 'Bachelor of Technology in Mechanical Engineering from the Indian Institute of Technology (BHU), Varanasi.',
     points: [],
     tags: ['Engineering', 'Problem Solving'],
   },

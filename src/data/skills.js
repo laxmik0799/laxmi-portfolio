@@ -29,6 +29,7 @@ export const skillCategories = [
       { name: 'REST APIs', note: 'Designing and integrating resource-oriented APIs.' },
       { name: 'Spring Data JPA', note: 'Repositories and entity mapping without boilerplate.' },
       { name: 'Hibernate', note: 'ORM behind JPA — relationships, lazy loading, queries.' },
+      { name: 'Backend Architecture', note: 'Layered design: controllers, services, repositories and clear contracts.' },
     ],
   },
   {
@@ -40,7 +41,9 @@ export const skillCategories = [
       { name: 'React.js', note: 'Reusable components, hooks and API integration.' },
       { name: 'HTML', note: 'Semantic, accessible markup.' },
       { name: 'CSS', note: 'Responsive layouts and polished UI.' },
+      { name: 'JavaScript (UI)', note: 'Interactive behaviour, state and API calls in the browser.' },
       { name: 'Material UI', note: 'Consistent, themeable component systems.' },
+      { name: 'Tailwind CSS', note: 'Utility-first styling, used across my Frontend Lab builds.' },
     ],
   },
   {
@@ -69,17 +72,25 @@ export const skillCategories = [
   },
   {
     id: 'ai',
-    title: 'AI & Automation',
+    title: 'AI & Data Engineering',
     icon: 'Sparkles',
     color: '#67e8f9',
     items: [
-      { name: 'Pandas', note: 'Data wrangling and reconciliation at scale.' },
-      { name: 'Streamlit', note: 'Turning Python tools into usable web apps.' },
+      { name: 'Python Automation', note: 'Scripts and tools that replace repetitive manual work.' },
+      { name: 'Data Processing', note: 'Cleaning, validating and reconciling tabular data.' },
+      { name: 'Data Modelling', note: 'Mapping source attributes to well-structured target models.' },
+      { name: 'ETL Concepts', note: 'Extract, transform, load: moving data reliably between systems.' },
+      { name: 'AI-driven Applications', note: 'Exploring how AI can power practical product features.' },
       { name: 'Excel Automation', note: 'Reading, validating and generating workbooks with Python.' },
-      { name: 'LLM Integration', note: 'Building AI-powered features into real products.' },
-      { name: 'RAG', note: 'Retrieval-augmented generation for grounded answers.' },
+      { name: 'Streamlit', note: 'Turning Python tools into usable web apps.' },
     ],
   },
 ]
 
 export const allSkills = skillCategories.flatMap((c) => c.items.map((i) => ({ ...i, categoryId: c.id })))
+
+/**
+ * Technologies explored in personal Frontend Lab projects. Shown separately
+ * from the professional stack above so the two are never confused.
+ */
+export const exploring = ['TypeScript', 'Three.js / React Three Fiber', 'GSAP', 'Framer Motion', 'Recharts', 'Zustand']

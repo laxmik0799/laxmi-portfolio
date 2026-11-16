@@ -58,9 +58,7 @@ export default function Hero({ ready }) {
     show: (i = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.9, delay: 0.1 + i * 0.1, ease } }),
   }
 
-  const [first, ...rest] = site.heroHeading.split(' ')
-  const name = rest.pop()
-  const middle = rest.join(' ')
+  const [firstName, ...lastName] = site.name.split(' ')
 
   return (
     <section id="home" ref={ref} className="relative flex min-h-[100svh] items-center overflow-hidden pt-24">
@@ -116,9 +114,9 @@ export default function Hero({ ready }) {
             {site.brand} — {site.tagline}
           </motion.p>
 
-          <h1 className="mt-4 font-display text-[clamp(3rem,9vw,6.5rem)] font-semibold leading-[0.95] tracking-tight text-white">
+          <h1 className="mt-4 font-display text-[clamp(3.2rem,10vw,7rem)] font-semibold uppercase leading-[0.92] tracking-tight text-white">
             <motion.span variants={item} initial="hidden" animate={show} custom={2} className="block">
-              {first} {middle}
+              {firstName}
             </motion.span>
             <motion.span
               variants={item}
@@ -127,7 +125,7 @@ export default function Hero({ ready }) {
               custom={3}
               className="text-gradient block animate-shimmer pb-2"
             >
-              {name}
+              {lastName.join(' ')}
             </motion.span>
           </h1>
 
@@ -136,9 +134,9 @@ export default function Hero({ ready }) {
             initial="hidden"
             animate={show}
             custom={4}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300/90 sm:text-xl"
+            className="mt-6 max-w-xl font-display text-[clamp(1.35rem,3vw,2rem)] font-medium leading-snug text-slate-100"
           >
-            {site.heroSubheading}
+            {site.heroHeadline[0]} <span className="text-slate-400">{site.heroHeadline[1]}</span>
           </motion.p>
 
           <motion.ul

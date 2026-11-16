@@ -14,12 +14,11 @@ export const site = {
   firstName: 'Laxmi',
   brand: 'LAXMI.EXE',
   tagline: 'Building Beyond Boundaries',
-  title: 'Software Developer | Full-Stack Engineer | AI & Backend Developer',
+  title: 'Software Developer | Full-Stack Engineer | AI Enthusiast',
   roles: ['Software Developer', 'Full-Stack Engineer', 'AI Enthusiast'],
 
-  heroHeading: "Hi, I'm Laxmi.",
-  heroSubheading:
-    'I build intelligent systems, scalable applications, and experiences that make technology meaningful.',
+  // The hero shows your name large, then this headline beneath it.
+  heroHeadline: ['Building Intelligent Products.', "Engineering What's Next."],
 
   // Small status pill in the hero. Set `available: false` to show a neutral state.
   status: {
@@ -30,16 +29,16 @@ export const site = {
   // ── About ───────────────────────────────────────────────────
   about: {
     intro:
-      "I'm a Software Developer and an IIT (BHU) Varanasi graduate, currently working as a Development Engineer at Standard Chartered.",
+      "I'm a Software Developer and IIT (BHU) graduate, currently a Development Engineer at Standard Chartered, with experience in software development, backend engineering, full-stack applications, AI-driven solutions and data automation.",
     body: [
-      'My engineering degree is in Mechanical Engineering, but my craft is software. I care about building backend systems that scale, full-stack products that feel effortless to use, and AI-powered applications that solve real problems.',
-      'I enjoy the whole lifecycle: designing the architecture, writing clean and maintainable code, debugging down to the root cause, and shipping something people can rely on.',
+      'I enjoy building scalable applications, designing efficient backend systems, developing interactive user experiences, and exploring how AI can transform software products.',
+      'My interests include backend engineering, full-stack development, system design, artificial intelligence, and building products that solve real-world problems.',
     ],
     // Short interactive highlights shown as hoverable chips.
     highlights: [
       { label: 'Backend Engineering', detail: 'Java, Spring Boot, REST APIs and well-modelled data layers.' },
       { label: 'Full-Stack Products', detail: 'React front ends wired to robust Spring Boot and Python services.' },
-      { label: 'AI-Powered Apps', detail: 'Bringing LLMs and retrieval into practical, usable products.' },
+      { label: 'AI-Driven Apps', detail: 'Exploring how AI can make software products more useful.' },
       { label: 'System Design', detail: 'Thinking in components, contracts, scalability and trade-offs.' },
       { label: 'Data Engineering', detail: 'Mapping, validation and automation pipelines for data quality.' },
     ],
@@ -52,14 +51,14 @@ export const site = {
 
   // ── Links ───────────────────────────────────────────────────
   links: {
-    email: 'your.email@example.com', // TODO: your email
-    linkedin: 'https://www.linkedin.com/in/your-linkedin-handle', // TODO
-    github: 'https://github.com/your-github-username', // TODO
+    email: 'laxmikumari0799@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/laxmi-kumari-a00817258/',
+    github: 'https://github.com/laxmik0799',
   },
 
   // Put your PDF at public/resume/ and keep this path in sync.
   resume: {
-    path: '/resume/Laxmi_Kumari_Resume.pdf', // TODO: replace the placeholder PDF
+    path: '/resume/Laxmi_Kumari_Resume.pdf', // replace this PDF to update the download
     downloadName: 'Laxmi_Kumari_Resume.pdf',
   },
 
@@ -72,9 +71,9 @@ export const site = {
   // ── SEO (injected into index.html at build time) ────────────
   seo: {
     url: 'https://laxmi-portfolio-beryl.vercel.app',
-    title: 'Laxmi Kumari — Software Developer & Full-Stack Engineer',
+    title: 'Laxmi Kumari — Software Developer | Full-Stack Engineer | AI Enthusiast',
     description:
-      'Portfolio of Laxmi Kumari, IIT (BHU) graduate and Development Engineer at Standard Chartered. Backend engineering, full-stack development and AI-powered applications.',
+      'Portfolio of Laxmi Kumari, IIT (BHU) graduate and Development Engineer at Standard Chartered. Backend engineering, full-stack development, AI-driven applications and data automation.',
     keywords:
       'Laxmi Kumari, Software Developer, Full-Stack Engineer, Java, Spring Boot, React, Python, AI, Backend Developer, IIT BHU, Portfolio',
     ogImage: '/og-image.png',

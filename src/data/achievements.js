@@ -13,11 +13,19 @@ export const achievements = [
     highlight: true,
   },
   {
+    id: 'iit',
+    icon: 'GraduationCap',
+    kicker: 'Education',
+    title: 'IIT (BHU) Graduate',
+    description: 'B.Tech from the Indian Institute of Technology (BHU), Varanasi: an engineering foundation I now apply to software.',
+    highlight: false,
+  },
+  {
     id: 'cp',
     icon: 'Terminal',
     kicker: 'Competitive Programming',
     title: 'Problem Solver',
-    description: 'Regular practice in algorithms and data structures — the habit of breaking hard problems into clean, efficient solutions.',
+    description: 'An ongoing interest in algorithms and data structures: the habit of breaking hard problems into clean, efficient solutions.',
     highlight: false,
   },
   {
@@ -25,7 +33,7 @@ export const achievements = [
     icon: 'BrainCircuit',
     kicker: 'Curiosity',
     title: 'AI Product Builder',
-    description: 'Deeply interested in AI-driven product development: turning models and retrieval into tools people actually want to use.',
+    description: 'Passionate about building AI-driven software products that people actually want to use.',
     highlight: false,
   },
 ]

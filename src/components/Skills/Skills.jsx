@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { skillCategories, allSkills } from '../../data/skills'
+import { skillCategories, allSkills, exploring } from '../../data/skills'
 import { getIcon } from '../../utils/icons'
 import SectionHeading from '../ui/SectionHeading'
 import Reveal from '../ui/Reveal'
@@ -134,6 +134,14 @@ export default function Skills() {
                 </Reveal>
               )
             })}
+            <Reveal className="sm:col-span-2">
+              <div className="rounded-2xl border border-dashed border-white/15 px-5 py-4">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">Exploring in personal projects</p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  Used in my Frontend Lab builds rather than at work: <span className="text-slate-200">{exploring.join(' · ')}</span>
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

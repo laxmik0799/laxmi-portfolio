@@ -16,6 +16,8 @@
 import cosmicVoyageCover from '../assets/images/projects/cosmic-voyage.jpg'
 import maisonCover from '../assets/images/projects/maison.jpg'
 import novaCover from '../assets/images/projects/nova.jpg'
+import orbitCover from '../assets/images/projects/orbit.jpg'
+import playgroundCover from '../assets/images/projects/playground.jpg'
 
 export const LAB_CATEGORIES = ['Frontend', '3D Experiences', 'Full Stack', 'AI & SaaS', 'Creative Websites']
 
@@ -86,8 +88,8 @@ export const labProjects = [
       'Accessible dialogs, reduced-motion support and code splitting',
     ],
     challenges: [
-      'Keeping filter state in the URL so it survives refresh, back and sharing without extra re-renders',
-      'Layering drawers and lightboxes above a sticky header when page transitions create new stacking contexts (solved with portals)',
+      { challenge: 'Keeping filters shareable and intact across refresh and the back button.', solution: 'Filter state lives in the URL query string and is read back on every render.' },
+      { challenge: 'Drawers and lightboxes opened underneath the sticky header.', solution: 'They render through portals, outside the stacking context created by page transitions.' },
     ],
     featured: false,
   },
@@ -118,47 +120,75 @@ export const labProjects = [
       'Command palette, dark / light / system theme, responsive layout',
     ],
     challenges: [
-      'Generating deterministic, realistic sample data anchored to today so every chart, alert and assistant answer agrees',
-      'Making Recharts follow the theme by reading CSS variables, and fixing an invisible overlay left behind by a shared layout animation',
+      { challenge: 'Making every chart, alert and assistant answer agree with each other.', solution: 'All sample data comes from one seeded generator anchored to today, and everything computes from it.' },
+      { challenge: 'Charts did not follow the dark and light themes.', solution: 'Chart colours are read from the active CSS variables whenever the theme changes.' },
     ],
     featured: false,
   },
   {
     id: 'creative-agency',
-    title: 'Creative Digital Agency',
-    tagline: 'Award-style agency site',
+    title: 'Orbit Studio: Creative Agency',
+    tagline: 'Creative digital agency website',
     description:
-      'An experimental agency website with bold typography, an interactive cursor, 3D objects, scroll-driven animation, horizontal scrolling and a portfolio gallery.',
-    overview: ['An award-style creative agency site exploring experimental layouts and scroll-driven storytelling.'],
+      'A bold, experimental website for a fictional creative agency: a custom GLSL 3D hero, interactive cursor, GSAP scroll choreography, horizontal scrolling and generative case-study artwork.',
+    overview: [
+      'Orbit Studio is designed like a high-end agency site: oversized editorial type, a shader-driven 3D planet that reacts to the pointer and to scroll, a custom cursor with contextual labels, magnetic buttons and curtain page transitions.',
+      'The work section pins and scrolls horizontally, the gallery filters and switches between grid and list, and each case study has its own palette. Every image is generated in code from seeded algorithms, so there are no stock photos. The contact form is a labelled demo.',
+    ],
     category: 'Creative Websites',
-    tech: ['React', 'TypeScript', 'GSAP', 'Three.js', 'Framer Motion'],
+    tech: ['React', 'TypeScript', 'Three.js', 'GSAP', 'Lenis', 'Framer Motion', 'Tailwind CSS'],
     icon: 'Palette',
-    accent: ['#ff5c8a', '#8b5cf6'],
-    cover: null,
+    accent: ['#d4ff3a', '#8b5cf6'],
+    cover: orbitCover,
     screenshots: [],
-    links: { github: null, live: null },
+    // Set `live` and switch status to 'live' once the deployment is verified.
+    links: { github: 'https://github.com/laxmik0799/studio-orbit', live: null },
     status: 'in-development',
-    features: ['Experimental layouts and bold type', 'Interactive cursor and 3D objects', 'Scroll-triggered and horizontal scroll sections', 'Interactive portfolio gallery'],
-    challenges: [],
+    features: [
+      'Custom GLSL 3D hero that reacts to pointer and scroll',
+      'Custom cursor with labels and magnetic buttons',
+      'GSAP ScrollTrigger reveals, parallax and pinned horizontal scrolling',
+      'Filterable project gallery and themed case studies',
+      'Generative artwork drawn in code (no stock imagery)',
+      'Curtain page transitions and a full-screen menu',
+    ],
+    challenges: [
+      { challenge: 'Keeping smooth scrolling, pinned sections and scroll-linked animation in sync.', solution: 'Lenis is driven by the GSAP ticker so ScrollTrigger reads one consistent scroll position.' },
+      { challenge: 'Page transitions occasionally stalled after in-page animations.', solution: 'Isolated page content from the route-level presence so inner exit animations can never block navigation.' },
+    ],
     featured: false,
   },
   {
     id: 'dev-playground',
     title: 'Developer Playground',
-    tagline: 'Terminal-driven interactive site',
+    tagline: 'Interactive developer playground',
     description:
-      'A developer-themed experience with an interactive terminal, animated code editor, technology constellation, coding demos and 3D floating objects.',
-    overview: ['A playful, command-driven website that turns developer tools into an interactive experience.'],
+      'A developer-themed interactive site with a terminal that really works, an animated code editor that visualises algorithms line by line, a technology constellation and 3D floating objects.',
+    overview: [
+      'The terminal is a real command interpreter with a virtual filesystem, history, tab completion and a safe calculator. Its commands drive the page: they run visualisers, switch themes, navigate and open projects.',
+      'The editor types out source code, then highlights the executing line in sync with visualisations of bubble sort, quicksort, binary search and breadth-first pathfinding on a grid you can draw walls on. A canvas constellation maps the tools I use and how they connect.',
+    ],
     category: 'Frontend',
-    tech: ['React', 'TypeScript', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
+    tech: ['React', 'TypeScript', 'React Three Fiber', 'Canvas', 'Framer Motion', 'Zustand', 'Tailwind CSS'],
     icon: 'SquareTerminal',
-    accent: ['#22d3ee', '#a855f7'],
-    cover: null,
+    accent: ['#ffb454', '#59c2ff'],
+    cover: playgroundCover,
     screenshots: [],
+    // Add the repository and live URL once they exist.
     links: { github: null, live: null },
     status: 'in-development',
-    features: ['Interactive terminal with commands', 'Animated code editor', 'Technology constellation', '3D floating objects'],
-    challenges: [],
+    features: [
+      'Working terminal: virtual filesystem, history, tab completion, calculator',
+      'Animated code editor with line-by-line execution highlighting',
+      'Sorting, binary search and BFS pathfinding visualisers',
+      'Interactive technology constellation on canvas',
+      '3D floating objects that react to hover and click',
+      'Dock navigation, keyboard shortcuts and four themes',
+    ],
+    challenges: [
+      { challenge: 'Keeping the highlighted code line in step with each visualisation.', solution: 'Every algorithm pre-computes its steps with the source line attached, so the player simply walks an array.' },
+      { challenge: 'Evaluating user-typed maths without eval.', solution: 'A small recursive-descent parser handles operators, precedence and parentheses safely.' },
+    ],
     featured: false,
   },
 ]
